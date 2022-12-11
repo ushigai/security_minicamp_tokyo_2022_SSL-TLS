@@ -59,7 +59,7 @@ OpenSSL 1.1.1f  31 Mar 2020
 ```
 
 ## 演習ファイルのダウンロード
-演習で使用するpythonファイルはこのリポジトリに配置する予定です。`git clone`でお好きな場所に配置して、適宜`git pull`で更新してもらえればなと思います。
+演習データもろもろはこのリポジトリに配置する予定です。`git clone`でお好きな場所に配置して、適宜`git pull`で更新してもらえればなと思います。
 
 ```bash
 $ git clone https://github.com/ushigai/security_minicamp_tokyo_2022_SSL-TLS.git
