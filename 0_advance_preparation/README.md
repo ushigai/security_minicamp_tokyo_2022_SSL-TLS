@@ -36,7 +36,7 @@ Installing collected packages: pycryptodome
 Successfully installed pycryptodome-3.16.0
 ```
 
-pythonインタプリタ内でインストールできているか確認し適当な関数を呼び出してみます。特にエラーなどが表示されなければ成功です。
+pythonインタプリタ内でインストールできているか、適当な関数を呼び出し確認してみます。特にエラーなどが表示されなければ成功です。
 
 ```bash
 $ python3
