@@ -51,6 +51,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## opensslのインストール
 openssl(version 1.1.1)のインストールを行います。macなら`brew`で、Windowsなら[slproweb.com](https://slproweb.com/products/Win32OpenSSL.html)からインストーラーをダウンロードできると思います。
 
+またmacの場合はパスを`~/.zshrc`にエクスポートする必要があります。
+```bash
+$ echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+$ source ~/.zshrc
+$ openssl version
+```
+
 `openssl version`で`1.1.1`と表示されればOKです。
 
 ```bash
