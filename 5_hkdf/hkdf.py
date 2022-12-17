@@ -18,10 +18,10 @@ def hkdf(length, ikm, salt, info):
     return hexlify(prk), hexlify(okm[:length])
 
 
-IKM  = unhexlify("0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b")
-salt = unhexlify("000102030405060708090a0b0c")
-info = unhexlify("f0f1f2f3f4f5f6f7f8f9")
-L = 42
+IKM  = 
+salt = 
+info = 
+L    = 
 
 prk, okm = hkdf(L, IKM, salt, info)
 
