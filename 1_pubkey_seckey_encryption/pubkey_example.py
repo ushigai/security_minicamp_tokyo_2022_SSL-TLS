@@ -7,32 +7,27 @@ def GeneratKey():
     e = 65537
     phi = (p - 1)*(q - 1)
     d = inverse(e, phi)
-    pubkey = [e, n]
-    seckey = [d]
-    return pubkey, seckey
+    return e, d, n
 
 
-def EncryptAlice(message, pubkey):
-    e, n = pubkey
+def EncryptAlice(message, e, n):
     cipher = pow(message, e, n)
     return cipher
 
 
-def DecryptBob(cipher, pubkey, seckey):
-    e, n = pubkey
-    d = seckey[0]
+def DecryptBob(cipher, e, d, n):
     message = pow(cipher, d, n)
     message = long_to_bytes(message)
     return message
 
 
 message = bytes_to_long(b"Hello_public_key_cryptography!!!")
-pubkey, seckey = GeneratKey()
+e, d, n = GeneratKey()
 print("message :", message)
 
-cipher = EncryptAlice(message, pubkey)
+cipher = EncryptAlice(message, e, n)
 print("cipher :", cipher)
 
-message_ = DecryptBob(cipher, pubkey, seckey)
+message_ = DecryptBob(cipher, e, d, n)
 print("message_ :", message_)
 
