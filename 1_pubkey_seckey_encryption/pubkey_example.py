@@ -1,4 +1,5 @@
 from Crypto.Util.number import *
+from time import time
 
 
 def GeneratKey():
@@ -21,7 +22,8 @@ def DecryptBob(cipher, e, d, n):
     return message
 
 
-message = bytes_to_long(b"Hello_public_key_cryptography!!!")
+start = time()
+message = bytes_to_long(b"Hello_public_key_cryptography!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 e, d, n = GeneratKey()
 print("message :", message)
 
@@ -31,3 +33,4 @@ print("cipher :", cipher)
 message_ = DecryptBob(cipher, e, d, n)
 print("message_ :", message_)
 
+print(time() - start)

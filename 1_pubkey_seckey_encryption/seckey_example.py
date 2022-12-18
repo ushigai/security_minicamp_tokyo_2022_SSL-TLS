@@ -2,6 +2,7 @@ from base64 import b64encode
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from os import urandom
+from time import time
 
 
 def EncryptAlice(message, seckey):
@@ -15,6 +16,7 @@ def DecryptBob(cipher_text, seckey):
     return message
 
 
+start = time()
 seckey, iv = urandom(16), urandom(16)
 message = b"Hello_private_key_cryptography!!!"
 print("message: ", message)
@@ -26,3 +28,4 @@ message_ = DecryptBob(cipher_text, seckey)
 print("message_: ", message_)
 
 
+print(time() - start)

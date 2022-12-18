@@ -13,7 +13,7 @@ def decrypt(key,iv,ciphertext,mac):
     try:
         plaintext = cipher.decrypt_and_verify(ciphertext,mac)
     except (ValueError, KeyError):
-        print("Error")
+        exit("Error")
     return plaintext
 
 
@@ -23,5 +23,8 @@ data = b"This is super secret message."
 
 ciphertext, mac = encrypt(key,nonce,data)
 print(ciphertext, mac)
+
+ciphertext += b"hogehoge"
+
 plaintext = decrypt(key,nonce,ciphertext,mac)
 print(plaintext)
